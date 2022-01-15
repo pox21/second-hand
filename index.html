@@ -10,26 +10,43 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <a href="index.html" class="header__logo">
         <img src="img/logo.svg" alt="Logo" class="header__logo-img" width="112" height="42">
       </a>
   
       <nav class="nav header__nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="?category=women" class="nav__link">Женщинам</a>
-          </li>
-          <li class="nav__item">
-            <a href="?category=men" class="nav__link">Мужчинам</a>
-          </li>
-          <li class="nav__item">
-            <a href="?category=kids" class="nav__link">Детям</a>
-          </li>
-        </ul>
+        <button class="nav__btn"> 
+          <span class="nav__btn-line">Каталог</span>
+        </button>
+        <div class="nav__mobile-wrapper">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="?category=women" class="nav__link">Женщинам</a>
+            </li>
+            <li class="nav__item">
+              <a href="?category=men" class="nav__link">Мужчинам</a>
+            </li>
+            <li class="nav__item">
+              <a href="?category=kids" class="nav__link">Детям</a>
+            </li>
+          </ul>
+  
+          <ul class="header__control-list nav__control">
+            <li class="header__control-item">
+              <button class="header__btn header__btn-cart"></button>
+            </li>
+            <li class="header__control-item">
+              <a href="?list=" class="header__btn header__btn-favorit"></a>
+            </li>
+            <li class="header__control-item">
+              <a href="#" class="header__btn header__btn-person"></a>
+            </li>
+          </ul>
+        </div>
       </nav>
       <div class="header__search">
-        <form action="#" class="search">
+        <form action="#" class="search search--active">
           <input type="search" class="search__input">
           <button class="search__btn" type="button"></button>
           <button class="search__close" type="button"></button>
@@ -175,8 +192,8 @@
   </main>
   <footer class="footer">
     <div class="container">
-      <ul class="footer__list-nav footer-nav">
-        <li class="footer-nav">
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item footer-nav">
           <h3 class="footer-nav__subtitle">Каталог</h3>
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
@@ -190,7 +207,7 @@
             </li>
           </ul>
         </li>
-        <li class="footer-nav">
+        <li class="footer__nav-item footer-nav">
           <h3 class="footer-nav__subtitle">Покупателям</h3>
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
@@ -207,7 +224,7 @@
             </li>
           </ul>
         </li>
-        <li class="footer-nav">
+        <li class="footer__nav-item footer-nav">
           <h3 class="footer-nav__subtitle">Связаться с нами</h3>
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
@@ -215,7 +232,7 @@
             </li>
           </ul>
         </li>
-        <li class="footer-nav">
+        <li class="footer__nav-item footer-nav">
           <h3 class="footer-nav__subtitle">Партнерам</h3>
           <ul class="footer-nav__list">
             <li class="footer-nav__item">
