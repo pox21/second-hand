@@ -15,7 +15,7 @@
   background-position: center;
   background-size: 24px 24px;
   background-repeat: no-repeat;
-  background-color: #f5f5f5;
+  background-color: var(--wild-sand-color);
   will-change: border-radius;
   transition: border-radius 0.2s ease-in-out;
   border: none;
@@ -31,7 +31,7 @@
   height: 100%;
   border: none;
   border-radius: 20px 0 0 20px;
-  background-color: #f5f5f5;
+  background-color: var(--wild-sand-color);
   transform: scaleX(0);
   transition: transform 0.4s ease-in-out 0.2s;
   transform-origin: right;
