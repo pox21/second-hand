@@ -69,6 +69,19 @@
   left: 0;
   bottom: 2px;
   background-color: var(--white-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer-nav__link:hover,
+.social__link:hover,
+.contacts__link:hover,
+.footer__agreement:hover {
+  transition: color 0.3s ease-in-out;
+  color: var(--fuego-color);
+}
+
+.footer__agreement:hover::after {
+  background-color: var(--fuego-color);
 }
 
 @media (max-width: 1200px) {
@@ -99,13 +112,21 @@
     font-size: 18px;
   }
 
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
   .footer__social {
-    margin: 0 0 40px;
+    margin: 0 auto 40px;
   }
 
   .footer__agreement {
-    margin: 0;
-    text-align: start;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    margin: 0 auto;
   }
 
   .footer__agreement::after {
@@ -114,8 +135,7 @@
 
   .footer__agreement span {
     position: relative;
-    display: block;
-    max-width: min-content;
+    margin: 0 auto;
   }
 
   .footer__agreement span::after {
@@ -131,22 +151,32 @@
 }
 
 @media (max-width: 580px) {
+  .footer__container {
+    max-width: 300px;
+  }
+
   .footer__nav-list {
     display: flex;
     flex-direction: column;
     gap: 30;
+    margin-bottom: 40px;
   }
 
-  .contacts {
-    flex-direction: column;
-    gap: 10px;
+  .footer-nav__list {
+    font-size: 14px;
   }
 
   .footer-nav__subtitle {
     display: flex;
     align-items: flex-start;
+    font-size: 16px;
     margin-bottom: 0;
-    transition: margin 0.3s ease-in-out;
+    cursor: pointer;
+    transition: margin 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .footer-nav__subtitle:hover {
+    color: var(--fuego-color);
   }
 
   .footer-nav__subtitle svg {
@@ -155,20 +185,39 @@
     margin-left: 5px;
     transition: transform 0.3s ease-in-out;
   }
-
-  .footer-nav__subtitle--active {
-    margin-bottom: 15px;
-  }
   
-  .footer-nav__subtitle--active svg {
+  .footer-nav--active .footer-nav__subtitle svg {
     transform: rotate(180deg);
   }
 
   .footer-nav__list {
-    display: none;
+    height: 0;
+    overflow: hidden;
   }
 
-  .footer-nav__subtitle--active + .footer-nav__list {
-    display: block;
+  .footer-nav--active .footer-nav__list {
+    padding-top: 15px;
+    height: auto;
+  }
+
+  .footer__contacts {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .contacts {
+    align-items: start;
+  }
+
+  .footer__social {
+    margin: 0 0 40px;
+  }
+
+  .footer__agreement  {
+    margin: 0;
+  }
+
+  .footer__agreement span {
+    margin: 0;
   }
 }
