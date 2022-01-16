@@ -60,6 +60,10 @@ h1, h2, h3, p {
   padding: 0 30px;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 72px;
